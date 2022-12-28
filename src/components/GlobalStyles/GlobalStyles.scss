@@ -1,0 +1,24 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary-color: #28a745;
+    --secondary-color: #ee4d2d;
+    --text-color: #000000cc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Mulish', sans-serif;
+    color: var(--text-color);
+    line-height: 1.2;
+    text-rendering: optimizeSpeed;
+}
