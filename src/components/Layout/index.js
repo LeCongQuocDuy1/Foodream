@@ -1,2 +1,2 @@
 export { default as DefaultLayout } from './DefaultLayout';
-export { default as HeaderFooterLayout } from './HeaderFooterLayout';
+export { default as SidebarLayout } from './SidebarLayout';

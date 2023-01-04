@@ -1,16 +1,14 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Sidebar from './Sidebar';
 
-function DefaultLayout({ children }) {
+function HeaderFooterLayout({ children }) {
     return <div>
         <Header />
-        <div className="container">
-            <Sidebar />
+        <div className="grid wide">
             <div className="content">{children}</div>
         </div>
         <Footer />
     </div>;
 }
 
-export default DefaultLayout;
+export default HeaderFooterLayout;

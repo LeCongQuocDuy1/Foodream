@@ -1,4 +1,4 @@
-import { HeaderFooterLayout } from '../components/Layout'
+import { SidebarLayout } from '../components/Layout'
 
 import Home from '../pages/Home';
 import Category from '../pages/Category';
@@ -16,21 +16,19 @@ const publicRoutes = [
     {
         path: '/category',
         component: Category,
+        layout: SidebarLayout,
     },
     {
         path: '/detail',
         component: ProDetail,
-        layout: HeaderFooterLayout,
     },
     {
         path: '/cart',
         component: Cart,
-        layout: HeaderFooterLayout,
     },
     {
         path: '/checkout',
         component: Checkout,
-        layout: HeaderFooterLayout,
     },
     {
         path: '/error',

@@ -1,0 +1,360 @@
+// Animations
+@keyframes Hienlentutu {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: #000;
+}
+
+.header-top {
+    background-color: var(--primary-color);
+    height: 3.4rem;
+    line-height: 3.4rem;
+}
+
+.header-body {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 1px 0 rgba(34, 28, 28, 0.05);
+    height: 9.5rem;
+    background-color: #fff;
+}
+
+.header-top__container,
+.header-body__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-top__left {
+}
+
+.gotoapp {
+    position: relative;
+}
+
+.gotoapp p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+}
+
+.phone a {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.phone-icon {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-right: 0.5rem;
+}
+
+.header-top__right {
+}
+
+.notifi {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+
+    &:hover {
+        transition: all 0.3s linear;
+        cursor: pointer;
+    }
+}
+
+.notifi-icon {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-right: 0.5rem;
+}
+
+.notifi a {
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.notifi:hover .header-top__notinews {
+    display: block;
+}
+
+.header-top__notinews {
+    display: none;
+    position: absolute;
+    top: 3.4rem;
+    left: -34rem;
+    width: 400px;
+    height: auto;
+    background-color: #fff;
+    z-index: 9;
+    animation: Hienlentutu ease-in 0.4s;
+    border: 1px solid rgba(0,0,0,.09);
+
+    &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        top: -3rem;
+        right: 2rem;
+        border: 20px solid;
+        border-color: transparent transparent #fff transparent;
+    }
+
+    &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: -2rem;
+        right: 6rem;
+        width: 20%;
+        height: 20px;
+    }
+}
+
+.header-top__notinews-header {
+    padding: 0.3rem 1rem;
+}
+
+.header-top__notinews-header span {
+    color: #ccc;
+    font-size: 1.4rem;
+}
+
+.header-top__notinews-body {
+    .item {
+        display: flex;
+        align-items: flex-start;
+        padding: 1rem;
+
+        &:hover {
+            transition: all 0.3s linear;
+            cursor: pointer;
+            background-color: #fff2ee;
+        }
+    }
+
+    .item img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        margin: 0 1rem 0 0;
+    }
+
+    .item-content h3 {
+        font-size: 1.4rem;
+        line-height: 1.3;
+        margin-bottom: 0.6rem;
+        color: #000;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .item-content p {
+        font-size: 1.4rem;
+        line-height: 1.3;
+        color: #333;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+
+.welcome {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.welcome-text {
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.welcome span {
+    width: 0.1rem;
+    height: 1.4rem;
+    background-color: rgba(255, 255, 255, 0.397);
+    margin: 0 0.5rem;
+    display: block;
+}
+
+.gotoapp p:hover,
+.phone a:hover,
+.notifi:hover .notifi-icon,
+.notifi:hover a,
+.welcome-text:hover {
+    color: hsla(0,0%,100%,.7);
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.gotoapp:hover .header-top__qr {
+    display: block;
+}
+
+.header-top__qr {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: #fff;
+    padding-bottom: 1rem;
+    z-index: 9;
+    animation: Hienlentutu ease-in 0.4s;
+}
+
+.header-top__qr-stores {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.header-top__qr-img {
+    width: 180px;
+    height: 180px;
+}
+
+.header-top__qr-store {
+    width: 70px;
+    height: 18px;
+}
+
+.header-logo {
+    display: block;
+    width: 200px;
+    height: 60px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.header-logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.header-search {
+    border-radius: 2px;
+    padding: 0.6rem;
+    background: #fff;
+    box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 20%);
+}
+
+.header-search__container {
+    display: flex;
+    align-items: center;
+    height: 3.5rem;
+}
+
+.header-search__container input {
+    width: 700px;
+    font-size: 1.5rem;
+    padding: 0 0.6rem;
+    height: 100%;
+}
+
+.header-search__drop {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 1rem;
+    height: 100%;
+    &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 0.1rem;
+        height: 80%;
+        left: -0.5rem;
+        top: 0.4rem;
+        background-color: #ccc;
+    }
+}
+
+.header-search__drop span {
+    font-size: 1.5rem;
+}
+
+.header-search__drop-icon {
+    font-size: 1.4rem;
+    margin-left: 1rem;
+}
+
+.header-search__btn {
+    padding: 1rem 2.5rem;
+    border-radius: 2px;
+    height: 100%;
+    background-color: #333;
+    text-align: center;
+    margin-left: 1rem;
+
+    &:hover {
+        opacity: 0.8;
+        transition: all 0.3s linear;
+        cursor: pointer;
+    }
+}
+
+.header-search__btn-icon {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+
+.header-cart {
+    position: relative;
+    margin-left: 3rem;
+
+    span {
+        display: block;
+        position: absolute;
+        top: -1rem;
+        left: 1.5rem;
+        width: 2.6rem;
+        height: 2rem;
+        border: 0.2rem solid red;
+        background-color: #fff;
+        font-size: 1.4rem;
+        color: red;
+        font-weight: bold;
+        border-radius: 3.6rem;
+        text-align: center;
+    }
+}
+
+.header-cart__icon {
+    color: red;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+
+
+
